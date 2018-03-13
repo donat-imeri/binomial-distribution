@@ -68,6 +68,12 @@ namespace Calculator
                 MessageBox.Show("Ju lutem plotesoni fushat perkatese!"
                     , "Fusha te zbrazeta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if ((int.Parse(txtTotal.Text)) < (int.Parse(txtSukses.Text)))
+            {
+                MessageBox.Show("Numri i provave nuk mund te jete me i vogel se numri i sukseseve", "Error!",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
             else
             {
                 int provat = int.Parse(txtTotal.Text);
@@ -95,6 +101,7 @@ namespace Calculator
         }
         
         public double llogaritKombinimet(int n, int k) {
+            
             double totali;
             double vleraSiperme=1;
             int x;
